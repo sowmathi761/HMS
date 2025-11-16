@@ -26,7 +26,7 @@ Partial Class DoctorsForm
         Label2 = New Label()
         txtDoctorId = New TextBox()
         txtName = New TextBox()
-        txtSpecialization = New TextBox()
+        txtSpecialisation = New TextBox()
         txtContactNo = New TextBox()
         txtSearch = New TextBox()
         btnPrevious = New Button()
@@ -46,9 +46,9 @@ Partial Class DoctorsForm
         Label1.AutoSize = True
         Label1.Location = New Point(169, 410)
         Label1.Name = "Label1"
-        Label1.Size = New Size(102, 20)
+        Label1.Size = New Size(101, 20)
         Label1.TabIndex = 0
-        Label1.Text = "Specialization"
+        Label1.Text = "Specialisation"
         ' 
         ' Label2
         ' 
@@ -61,24 +61,24 @@ Partial Class DoctorsForm
         ' 
         ' txtDoctorId
         ' 
-        txtDoctorId.Location = New Point(315, 236)
+        txtDoctorId.Location = New Point(315, 233)
         txtDoctorId.Name = "txtDoctorId"
         txtDoctorId.Size = New Size(125, 27)
         txtDoctorId.TabIndex = 3
         ' 
         ' txtName
         ' 
-        txtName.Location = New Point(315, 319)
+        txtName.Location = New Point(315, 315)
         txtName.Name = "txtName"
         txtName.Size = New Size(125, 27)
         txtName.TabIndex = 4
         ' 
-        ' txtSpecialization
+        ' txtSpecialisation
         ' 
-        txtSpecialization.Location = New Point(315, 407)
-        txtSpecialization.Name = "txtSpecialization"
-        txtSpecialization.Size = New Size(125, 27)
-        txtSpecialization.TabIndex = 5
+        txtSpecialisation.Location = New Point(315, 407)
+        txtSpecialisation.Name = "txtSpecialisation"
+        txtSpecialisation.Size = New Size(125, 27)
+        txtSpecialisation.TabIndex = 5
         ' 
         ' txtContactNo
         ' 
@@ -96,7 +96,7 @@ Partial Class DoctorsForm
         ' 
         ' btnPrevious
         ' 
-        btnPrevious.Location = New Point(1117, 351)
+        btnPrevious.Location = New Point(946, 351)
         btnPrevious.Name = "btnPrevious"
         btnPrevious.Size = New Size(94, 29)
         btnPrevious.TabIndex = 8
@@ -105,7 +105,7 @@ Partial Class DoctorsForm
         ' 
         ' btnNext
         ' 
-        btnNext.Location = New Point(946, 351)
+        btnNext.Location = New Point(1117, 351)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(94, 29)
         btnNext.TabIndex = 9
@@ -203,7 +203,7 @@ Partial Class DoctorsForm
         Controls.Add(btnPrevious)
         Controls.Add(txtSearch)
         Controls.Add(txtContactNo)
-        Controls.Add(txtSpecialization)
+        Controls.Add(txtSpecialisation)
         Controls.Add(txtName)
         Controls.Add(txtDoctorId)
         Controls.Add(Label2)
@@ -218,7 +218,7 @@ Partial Class DoctorsForm
     Friend WithEvents Label2 As Label
     Friend WithEvents txtDoctorId As TextBox
     Friend WithEvents txtName As TextBox
-    Friend WithEvents txtSpecialization As TextBox
+    Friend WithEvents txtSpecialisation As TextBox
     Friend WithEvents txtContactNo As TextBox
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnPrevious As Button

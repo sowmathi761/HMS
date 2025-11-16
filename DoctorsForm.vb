@@ -29,7 +29,7 @@ Public Class DoctorsForm
             currentPosition = position
             txtDoctorId.Text = dt.Rows(position)("Doctor_Id").ToString()
             txtName.Text = dt.Rows(position)("Name").ToString()
-            txtSpecialization.Text = dt.Rows(position)("Specialization").ToString()
+            txtSpecialisation.Text = dt.Rows(position)("Specialisation").ToString()
             txtContactNo.Text = dt.Rows(position)("Contact_No").ToString()
         End If
     End Sub
@@ -37,7 +37,7 @@ Public Class DoctorsForm
     Private Sub ClearFields()
         txtDoctorId.Clear()
         txtName.Clear()
-        txtSpecialization.Clear()
+        txtSpecialisation.Clear()
         txtContactNo.Clear()
         txtSearch.Clear()
         txtDoctorId.Focus()
@@ -51,11 +51,12 @@ Public Class DoctorsForm
             End If
 
             OpenConnection()
-            Dim query As String = "INSERT INTO DoctorTable3 (Doctor_Id, Name, SPECIALISATION, Contact_No) VALUES (:id, :name, :spec, :contact)"
+            Dim query As String = "INSERT INTO DoctorTable3 (Doctor_Id, Name, Specialisation, Contact_No) VALUES (:id, :name, :spec, :contact)"
             cmd = New OracleCommand(query, conn)
+
             cmd.Parameters.Add(":id", OracleDbType.Int32).Value = Integer.Parse(txtDoctorId.Text)
             cmd.Parameters.Add(":name", OracleDbType.Varchar2).Value = txtName.Text
-            cmd.Parameters.Add(":spec", OracleDbType.Varchar2).Value = txtSpecialization.Text
+            cmd.Parameters.Add(":spec", OracleDbType.Varchar2).Value = txtSpecialisation.Text
             cmd.Parameters.Add(":contact", OracleDbType.Varchar2).Value = txtContactNo.Text
 
             cmd.ExecuteNonQuery()
@@ -77,19 +78,22 @@ Public Class DoctorsForm
             End If
 
             OpenConnection()
-            Dim query As String = "UPDATE DoctorTable3 SET Name=:name, Specialization=:spec, Contact_No=:contact WHERE Doctor_Id=:id"
+            Dim query As String = "UPDATE DoctorTable3 SET Name=:name, Specialisation=:spec, Contact_No=:contact WHERE Doctor_Id=:id"
             cmd = New OracleCommand(query, conn)
+
             cmd.Parameters.Add(":name", OracleDbType.Varchar2).Value = txtName.Text
-            cmd.Parameters.Add(":spec", OracleDbType.Varchar2).Value = txtSpecialization.Text
+            cmd.Parameters.Add(":spec", OracleDbType.Varchar2).Value = txtSpecialisation.Text
             cmd.Parameters.Add(":contact", OracleDbType.Varchar2).Value = txtContactNo.Text
             cmd.Parameters.Add(":id", OracleDbType.Int32).Value = Integer.Parse(txtDoctorId.Text)
 
             Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
             If rowsAffected > 0 Then
                 MessageBox.Show("Doctor record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 MessageBox.Show("No record found with this Doctor ID", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
+
             CloseConnection()
             LoadDoctorData()
         Catch ex As Exception
@@ -106,6 +110,7 @@ Public Class DoctorsForm
             End If
 
             Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
             If result = DialogResult.Yes Then
                 OpenConnection()
                 Dim query As String = "DELETE FROM DoctorTable3 WHERE Doctor_Id=:id"
@@ -119,6 +124,7 @@ Public Class DoctorsForm
                 Else
                     MessageBox.Show("No record found with this Doctor ID", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
+
                 CloseConnection()
                 LoadDoctorData()
             End If
@@ -144,24 +150,29 @@ Public Class DoctorsForm
             cmd = New OracleCommand(query, conn)
 
             Dim searchValue As String = txtSearch.Text
+
             If IsNumeric(searchValue) Then
                 cmd.Parameters.Add(":search", OracleDbType.Int32).Value = Integer.Parse(searchValue)
             Else
                 cmd.Parameters.Add(":search", OracleDbType.Int32).Value = DBNull.Value
             End If
+
             cmd.Parameters.Add(":searchName", OracleDbType.Varchar2).Value = "%" & searchValue & "%"
 
             dr = cmd.ExecuteReader()
+
             If dr.Read() Then
                 txtDoctorId.Text = dr("Doctor_Id").ToString()
                 txtName.Text = dr("Name").ToString()
-                txtSpecialization.Text = dr("Specialization").ToString()
+                txtSpecialisation.Text = dr("Specialisation").ToString()
                 txtContactNo.Text = dr("Contact_No").ToString()
             Else
                 MessageBox.Show("No record found!", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
+
             dr.Close()
             CloseConnection()
+
         Catch ex As Exception
             MessageBox.Show("Error searching record: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             CloseConnection()
@@ -184,11 +195,4 @@ Public Class DoctorsForm
         End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-
-    End Sub
 End Class

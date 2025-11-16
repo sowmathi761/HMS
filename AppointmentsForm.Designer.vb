@@ -135,7 +135,7 @@ Partial Class AppointmentsForm
         ' 
         ' btnPrevious
         ' 
-        btnPrevious.Location = New Point(1143, 250)
+        btnPrevious.Location = New Point(967, 250)
         btnPrevious.Name = "btnPrevious"
         btnPrevious.Size = New Size(94, 29)
         btnPrevious.TabIndex = 12
@@ -153,7 +153,7 @@ Partial Class AppointmentsForm
         ' 
         ' btnNext
         ' 
-        btnNext.Location = New Point(967, 250)
+        btnNext.Location = New Point(1143, 250)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(94, 29)
         btnNext.TabIndex = 14

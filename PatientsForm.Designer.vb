@@ -169,7 +169,7 @@ Partial Class PatientsForm
         ' 
         ' btnNext
         ' 
-        btnNext.Location = New Point(859, 502)
+        btnNext.Location = New Point(1000, 502)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(94, 29)
         btnNext.TabIndex = 15
@@ -214,7 +214,7 @@ Partial Class PatientsForm
         ' 
         ' btnPrevious
         ' 
-        btnPrevious.Location = New Point(1000, 502)
+        btnPrevious.Location = New Point(862, 502)
         btnPrevious.Name = "btnPrevious"
         btnPrevious.Size = New Size(94, 29)
         btnPrevious.TabIndex = 20

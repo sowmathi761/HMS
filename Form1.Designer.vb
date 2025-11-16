@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         MenuStrip1 = New MenuStrip()
         PatientsFormToolStripMenuItem = New ToolStripMenuItem()
         DoctorsFormToolStripMenuItem = New ToolStripMenuItem()
@@ -36,7 +37,7 @@ Partial Class Form1
         MenuStrip1.Items.AddRange(New ToolStripItem() {PatientsFormToolStripMenuItem, DoctorsFormToolStripMenuItem, AppointmentsFormToolStripMenuItem, ExitToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1322, 28)
+        MenuStrip1.Size = New Size(1369, 28)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -69,7 +70,8 @@ Partial Class Form1
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
-        ClientSize = New Size(1322, 617)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(1369, 645)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Form1"
