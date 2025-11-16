@@ -4,6 +4,7 @@
 
 A simple Windows Form Application built using **VB.NET** and **Oracle Database** to manage patients, doctors, and appointments.
 
+---
 
 ## ⭐ **Features**
 
@@ -14,7 +15,7 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * Clean and simple user interface
 * Navigation menu for easy movement between forms
 
-
+---
 
 ## 🛠️ **Tech Used**
 
@@ -23,7 +24,7 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * **Oracle Database**
 * **SQL Developer**
 
-
+---
 
 ## 📄 **Project Structure**
 
@@ -33,6 +34,7 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * `AppointmentsForm.vb` – Appointment CRUD
 * Oracle SQL Queries included
 
+---
 
 ## 🧪 **Database Tables**
 
@@ -61,8 +63,17 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * APP_DATE
 * STATUS
 
+---
 
-**How to Run**
+## 📸 **Screenshots (PDF)**
+
+Click below to view all screenshots:
+
+👉 **[View Screenshots (PDF)](HMS_Screenshots.pdf)**
+
+---
+
+## 🚀 **How to Run**
 
 1. Clone the repository
 2. Open project in **Visual Studio**
@@ -70,11 +81,13 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 4. Update connection string in code
 5. Run the project
 
+---
 
+## 👩‍💻 **Author**
 
-**Author**
-
-Sowmathi R
+**Sowmathi R**
 Hospital Management System – Mini Project
+
+---
 
 
