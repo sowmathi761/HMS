@@ -1,12 +1,9 @@
-Here is a **simple, clean, interview-friendly README** you can copy–paste directly into GitHub.
 
----
 
 # 📌 **Hospital Management System (HMS)**
 
 A simple Windows Form Application built using **VB.NET** and **Oracle Database** to manage patients, doctors, and appointments.
 
----
 
 ## ⭐ **Features**
 
@@ -17,7 +14,7 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * Clean and simple user interface
 * Navigation menu for easy movement between forms
 
----
+
 
 ## 🛠️ **Tech Used**
 
@@ -26,7 +23,7 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * **Oracle Database**
 * **SQL Developer**
 
----
+
 
 ## 📄 **Project Structure**
 
@@ -36,7 +33,6 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * `AppointmentsForm.vb` – Appointment CRUD
 * Oracle SQL Queries included
 
----
 
 ## 🧪 **Database Tables**
 
@@ -65,16 +61,8 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 * APP_DATE
 * STATUS
 
----
 
-## 📸 **Screenshots (PDF)**
-
-Click below to view all screenshots:
-
-👉 **[View Screenshots (PDF)](HMS_Screenshots.pdf)**
-
----
-How to Run
+**How to Run**
 
 1. Clone the repository
 2. Open project in **Visual Studio**
@@ -84,11 +72,9 @@ How to Run
 
 
 
-Author
+**Author**
 
 Sowmathi R
 Hospital Management System – Mini Project
 
 
-
-If you want a **better designed** or **more professional** README, tell me and I will format it beautifully.
