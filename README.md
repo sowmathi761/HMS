@@ -66,7 +66,7 @@ A simple Windows Form Application built using **VB.NET** and **Oracle Database**
 ## Screenshots (PDF)
 
 Click below to view all screenshots:
-**[View Screenshots (PDF)](HMS_Screenshots.pdf)**
+**[View Screenshots (PDF)](Output_Screenshots.pdf)**
 
 ---
 
